@@ -1,19 +1,13 @@
-<form> 
-    <label for="username">Nome de usuário:</label> 
-    <input type="text" name="username" id="username" /> 
-    
-    <label for="password">Senha:</label> 
-    <input type="password" name="password" id="password" /> 
-    
-    <input type="radio" name="gender" value="male" />Masculino<br /> 
-    <input type="radio" name="gender" value="female" />Feminino<br /> 
-    <input type="radio" name="gender" value="other" />Outro 
-    <input list="Options" /> 
-    <datalist id="Options"> 
-        <option value="Option1"></option> 
-        <option value="Option2"></option> 
-        <option value="Option3"></option> 
-    </datalist> 
-    <input type="submit" value="Enviar" /> 
-    <input type="color" /> 
-    <input type="checkbox" name="correct" value="correct" />Correto </form>
+# Configuracoes do banco de dados
+spring.datasource.url=jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl
+spring.datasource.username=username
+spring.datasource.password=password
+spring.jpa.database-platform=org.hibernate.dialect.OracleDialect
+
+# Configuracoes do flyway
+spring.flyway.baseline-on-migrate=true
+
+# Configuracoes de JPA
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.hql.bulk_id_strategy=org.hibernate.hql.spi.id.inline.InlineIdsInClauseBulkIdStrategy
